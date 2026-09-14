@@ -283,7 +283,11 @@ export default function AnalyzePage() {
             </details>
           )}
 
-          <AnalysisResult analysis={result.analysis} matchedKnowledge={result.matchedKnowledge ?? []} />
+          <AnalysisResult
+            analysis={result.analysis}
+            matchedKnowledge={result.matchedKnowledge ?? []}
+            modelUsed={result.modelUsed}
+          />
         </div>
       )}
     </div>

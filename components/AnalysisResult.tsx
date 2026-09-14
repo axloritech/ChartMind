@@ -70,9 +70,11 @@ function LevelChip({ label, tone }: { label: string; tone: "bull" | "bear" }) {
 export default function AnalysisResult({
   analysis,
   matchedKnowledge,
+  modelUsed,
 }: {
   analysis: ChartAnalysis;
   matchedKnowledge: KnowledgeEntry[];
+  modelUsed?: string;
 }) {
   const confidenceLower = (analysis.confidence || "").toLowerCase();
   const confidenceTone = confidenceLower.startsWith("high")
@@ -91,6 +93,11 @@ export default function AnalysisResult({
         <span className="chip">
           <span aria-hidden="true">📚</span> {matchedKnowledge.length} knowledge entries used
         </span>
+        {modelUsed && (
+          <span className="chip" title="AI model that produced this analysis">
+            <span aria-hidden="true">🤖</span> {modelUsed}
+          </span>
+        )}
       </div>
 
       <div className="grid gap-5 lg:grid-cols-2">

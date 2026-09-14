@@ -46,6 +46,8 @@ export interface ChartAnalysis {
 export interface AnalyzeResponse {
   ok: boolean;
   analysis?: ChartAnalysis;
+  /** e.g. "gemini/gemini-3.5-flash" or "openai/gpt-4o-mini" — which model produced the analysis */
+  modelUsed?: string;
   matchedKnowledge?: KnowledgeEntry[];
   error?: string;
   stage?: string;

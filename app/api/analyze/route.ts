@@ -90,11 +90,11 @@ export async function POST(req: Request) {
     }
 
     // ---- Step 1: Gemini Vision — extract structured observations ----
-    const visionRaw = await generateFromImage(imageBase64, mimeType, VISION_PROMPT, VISION_SYSTEM, {
+    const visionRes = await generateFromImage(imageBase64, mimeType, VISION_PROMPT, VISION_SYSTEM, {
       temperature: 0.2,
       maxOutputTokens: 3072,
     });
-    const obsRaw = parseJsonResponse<Record<string, unknown>>(visionRaw);
+    const obsRaw = parseJsonResponse<Record<string, unknown>>(visionRes.text);
 
     const observations: ChartObservations = {
       trend: coerceString(obsRaw.trend),
@@ -128,7 +128,7 @@ export async function POST(req: Request) {
     const matched = searchKnowledge(query, 8);
 
     // ---- Step 3: Gemini text — final knowledge-grounded analysis ----
-    const analysisRaw = await generateFromText(
+    const analysisRes = await generateFromText(
       buildAnalysisPrompt(
         observations,
         matched.map((m) => ({ title: m.title, content: m.content }))
@@ -136,12 +136,14 @@ export async function POST(req: Request) {
       ANALYSIS_SYSTEM,
       { temperature: 0.4, maxOutputTokens: 4096 }
     );
-    const analysisParsed = parseJsonResponse<Record<string, unknown>>(analysisRaw);
+    const analysisParsed = parseJsonResponse<Record<string, unknown>>(analysisRes.text);
     const analysis = normalizeAnalysis(analysisParsed, observations);
+    const modelUsed = `${analysisRes.provider}/${analysisRes.model}`;
 
     return NextResponse.json({
       ok: true,
       analysis,
+      modelUsed,
       matchedKnowledge: matched.map(({ score: _score, ...entry }) => entry),
     });
   } catch (err) {

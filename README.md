@@ -191,9 +191,11 @@ Deployment notes:
 - The `/api/analyze` route sets `maxDuration = 60`. On Vercel Hobby the effective limit may be
   lower; if analyses time out on large models, use a fast model (e.g. `gemini-3.5-flash`) or upgrade.
 - **Model resilience:** Google retires Gemini model IDs regularly (`gemini-2.0-flash` was shut down
-  June 1, 2026). If your `GEMINI_MODEL` returns 404, ChartMind automatically retries with known-good
-  fallbacks (`gemini-3.5-flash` → `gemini-3.8-flash` → `gemini-2.5-flash` → `gemini-3.1-flash-lite`),
-  so a stale env value will not break analysis.
+  June 1, 2026) and popular models occasionally return 503 "high demand". ChartMind handles both:
+  it retries overloaded models with backoff, then falls through the chain
+  `GEMINI_MODEL → gemini-3.5-flash → gemini-3.8-flash → gemini-2.5-flash → gemini-3.1-flash-lite`.
+  If you also set an optional `OPENAI_API_KEY`, it finally falls back across providers to
+  `gpt-4o-mini → gpt-4o`. The results dashboard shows which model produced the analysis.
 
 ## 🔐 Security
 
