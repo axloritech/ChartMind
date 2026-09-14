@@ -7,6 +7,7 @@ export default function Footer() {
           is visible — it never predicts future prices and does not provide financial advice.
           Trading involves substantial risk.
         </p>
+        <p className="mt-2 text-center text-[10px] text-slate-400">Build v2 · 2026-09-14 · light theme</p>
       </div>
     </footer>
   );
