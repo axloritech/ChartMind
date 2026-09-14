@@ -1,0 +1,303 @@
+[
+  {
+    "title": "Hammer Candlestick",
+    "category": "candlestick-patterns",
+    "content": "A hammer is a single-candle pattern with a small real body near the top of the range and a lower shadow at least two times the body height, with little or no upper shadow. It forms when sellers push price down during the period but buyers reclaim nearly all of the range by the close. It is considered potentially bullish when it appears after a decline or at support, especially on higher-than-average volume. Traders usually wait for confirmation from the next candle (a close above the hammer's body) before treating it as a reversal signal, because a hammer inside a strong downtrend can simply be a pause.",
+    "keywords": ["hammer", "candlestick", "reversal", "bullish", "lower shadow", "support", "single candle"],
+    "source": "seed"
+  },
+  {
+    "title": "Inverted Hammer Candlestick",
+    "category": "candlestick-patterns",
+    "content": "The inverted hammer has a small real body near the low of the range and a long upper shadow at least twice the body height. It appears after a decline and shows that buyers attempted a rally that was pushed back, yet the failure of sellers to make new lows can indicate weakening downside momentum. It is a tentative bullish signal that requires confirmation, such as a strong bullish candle closing above the inverted hammer's body.",
+    "keywords": ["inverted hammer", "candlestick", "reversal", "bullish", "upper shadow", "confirmation"],
+    "source": "seed"
+  },
+  {
+    "title": "Shooting Star Candlestick",
+    "category": "candlestick-patterns",
+    "content": "A shooting star is the bearish mirror of the hammer: a small body near the low of the range with a long upper shadow, appearing after an advance or at resistance. It shows buyers pushed price to new highs but sellers drove it back down before the close, suggesting upside rejection. It is more meaningful at established resistance levels, after extended rallies, or on high volume, and is typically confirmed by a subsequent bearish candle.",
+    "keywords": ["shooting star", "candlestick", "reversal", "bearish", "resistance", "upper shadow", "rejection"],
+    "source": "seed"
+  },
+  {
+    "title": "Hanging Man Candlestick",
+    "category": "candlestick-patterns",
+    "content": "The hanging man looks identical to a hammer (small body at the top, long lower shadow) but appears after an uptrend or at resistance, which makes it potentially bearish. The long lower shadow reveals that a significant sell-off occurred during the session even though buyers recovered the range. Confirmation — a bearish close below the hanging man's body — is important because the pattern alone can also just reflect a brief shakeout within a healthy trend.",
+    "keywords": ["hanging man", "candlestick", "reversal", "bearish", "top", "resistance"],
+    "source": "seed"
+  },
+  {
+    "title": "Bullish Engulfing Pattern",
+    "category": "candlestick-patterns",
+    "content": "A bullish engulfing pattern is a two-candle reversal signal where a large green (bullish) candle completely engulfs the body of the previous small red (bearish) candle. It typically appears at the end of a downtrend or at support and indicates a decisive shift of momentum from sellers to buyers. The signal is stronger when the engulfing candle closes on high volume, engulfs more than one prior body, or forms at a confluence of support such as a trendline or moving average.",
+    "keywords": ["bullish engulfing", "engulfing", "candlestick", "reversal", "bullish", "support", "momentum"],
+    "source": "seed"
+  },
+  {
+    "title": "Bearish Engulfing Pattern",
+    "category": "candlestick-patterns",
+    "content": "A bearish engulfing pattern is a two-candle reversal signal where a large red (bearish) candle completely engulfs the body of the previous small green (bullish) candle, usually after an advance or at resistance. It signals that sellers have overwhelmed buyers. Reliability improves at known resistance, after parabolic moves, or when accompanied by rising volume. Traders often wait for the next candle to close lower as confirmation.",
+    "keywords": ["bearish engulfing", "engulfing", "candlestick", "reversal", "bearish", "resistance", "momentum"],
+    "source": "seed"
+  },
+  {
+    "title": "Doji Candlestick",
+    "category": "candlestick-patterns",
+    "content": "A doji forms when the open and close are nearly equal, producing a very small body with shadows on both sides. It represents indecision and equilibrium between buyers and sellers. Its meaning depends on context: after a long trend or at a key level, a doji can warn of an impending reversal or pause, but inside a range it is often just noise. Variants include the gravestone doji (long upper shadow, bearish at highs), dragonfly doji (long lower shadow, bullish at lows), and long-legged doji (large shadows both ways, strong indecision).",
+    "keywords": ["doji", "candlestick", "indecision", "gravestone", "dragonfly", "reversal", "neutral"],
+    "source": "seed"
+  },
+  {
+    "title": "Morning Star Pattern",
+    "category": "candlestick-patterns",
+    "content": "The morning star is a three-candle bullish reversal pattern: a long bearish candle, a small-bodied candle (star) that gaps or closes near the prior low, and a long bullish candle that closes well into the first candle's body. It marks a transition from selling pressure to indecision to buying pressure. It is most trusted at support levels and after meaningful declines. The evening star is the bearish equivalent found at tops.",
+    "keywords": ["morning star", "evening star", "candlestick", "three candle", "reversal", "bullish", "bearish"],
+    "source": "seed"
+  },
+  {
+    "title": "Evening Star Pattern",
+    "category": "candlestick-patterns",
+    "content": "The evening star is a three-candle bearish reversal pattern: a long bullish candle, a small-bodied star near the highs, then a long bearish candle closing deep into the first candle's body. It appears after an uptrend or at resistance and signals momentum shifting from buyers to sellers. Confirmation is the third candle closing lower with conviction, ideally on increased volume.",
+    "keywords": ["evening star", "candlestick", "three candle", "reversal", "bearish", "resistance"],
+    "source": "seed"
+  },
+  {
+    "title": "Three White Soldiers / Three Black Crows",
+    "category": "candlestick-patterns",
+    "content": "Three white soldiers are three consecutive long bullish candles with higher closes and small upper shadows, indicating sustained buying pressure — bullish when appearing at the base of a downtrend. Three black crows are the bearish mirror: three consecutive long bearish candles with lower closes, signaling strong distribution. Both are more reliable when each candle opens within the previous candle's body and when they are not already at an overextended level.",
+    "keywords": ["three white soldiers", "three black crows", "candlestick", "continuation", "reversal", "bullish", "bearish", "momentum"],
+    "source": "seed"
+  },
+  {
+    "title": "Marubozu Candle",
+    "category": "candlestick-patterns",
+    "content": "A marubozu is a candle with a full real body and no (or almost no) shadows — a bullish marubozu opens at the low and closes at the high, a bearish marubozu opens at the high and closes at the low. It expresses one-sided conviction. Bullish marubozus appearing on breakouts add credibility to the move; bearish marubozus at support breaks signal aggressive selling. A marubozu in mid-range with no context is less meaningful.",
+    "keywords": ["marubozu", "candlestick", "momentum", "conviction", "breakout", "bullish", "bearish"],
+    "source": "seed"
+  },
+  {
+    "title": "Tweezer Tops and Bottoms",
+    "category": "candlestick-patterns",
+    "content": "Tweezer tops occur when two or more consecutive candles share nearly identical highs, typically after an advance or at resistance, suggesting sellers are defending that level. Tweezer bottoms share nearly identical lows after a decline or at support, suggesting buyers are defending. They are minor reversal signals that gain weight at established support/resistance and with a rejecting candle shape (e.g. shooting star or hammer as the second candle).",
+    "keywords": ["tweezer", "tweezer top", "tweezer bottom", "candlestick", "reversal", "support", "resistance"],
+    "source": "seed"
+  },
+  {
+    "title": "Head and Shoulders Pattern",
+    "category": "chart-patterns",
+    "content": "Head and shoulders is a bearish reversal pattern formed by three peaks: a left shoulder, a higher head, and a lower right shoulder, connected by a neckline drawn through the intervening lows. It reflects buyers failing to push to new highs. The pattern completes when price closes below the neckline, and the classical measured move projects the head-to-neckline distance downward from the breakout point. Volume often declines on the right shoulder. The inverse head and shoulders is the bullish version found at bottoms, completing on a neckline break upward.",
+    "keywords": ["head and shoulders", "inverse head and shoulders", "chart pattern", "reversal", "neckline", "bearish", "bullish", "measured move"],
+    "source": "seed"
+  },
+  {
+    "title": "Double Top and Double Bottom",
+    "category": "chart-patterns",
+    "content": "A double top is a bearish reversal pattern where price tests a resistance level twice and fails both times, forming an 'M' shape; it confirms on a close below the intermediate trough, with a measured move equal to the pattern's height. A double bottom is the bullish 'W' mirror at support, confirming on a close above the intermediate peak. Reliability improves when the second test shows weakening momentum (lower volume, rejection wicks) and when the confirmation break is decisive.",
+    "keywords": ["double top", "double bottom", "chart pattern", "reversal", "support", "resistance", "measured move", "m w shape"],
+    "source": "seed"
+  },
+  {
+    "title": "Triple Top and Triple Bottom",
+    "category": "chart-patterns",
+    "content": "Triple tops and bottoms involve three tests of the same resistance or support level. Three failed attempts to break a level strengthen the case that the level is significant. A triple top confirms bearishly when price closes below the pattern's support; a triple bottom confirms bullishly on a close above its resistance. These patterns take longer to form and are more reliable than double tops/bottoms, but the eventual break often moves sharply because many stop orders cluster beyond the level.",
+    "keywords": ["triple top", "triple bottom", "chart pattern", "reversal", "support", "resistance", "level testing"],
+    "source": "seed"
+  },
+  {
+    "title": "Ascending, Descending and Symmetrical Triangles",
+    "category": "chart-patterns",
+    "content": "Triangles are consolidation patterns with converging trendlines. An ascending triangle has flat resistance and rising lows — often bullish because buyers keep stepping up, though it can break either way. A descending triangle has flat support and lower highs — often bearish. A symmetrical triangle has both converging and is neutral, typically resolving in the direction of the prior trend. Breakouts are usually traded when price closes outside the trendline near the apex, ideally on expanding volume; measuring the pattern's widest height from the breakout projects a rough target.",
+    "keywords": ["triangle", "ascending triangle", "descending triangle", "symmetrical triangle", "chart pattern", "consolidation", "breakout", "continuation"],
+    "source": "seed"
+  },
+  {
+    "title": "Bull and Bear Flags and Pennants",
+    "category": "chart-patterns",
+    "content": "Flags and pennants are short-term continuation patterns formed by a sharp impulse move (the flagpole) followed by a tight, counter-trend consolidation channel (flag) or small symmetrical triangle (pennant). A bull flag slopes down or sideways within an uptrend and often resolves upward; a bear flag does the opposite in a downtrend. Traders watch for a breakout in the pole direction with volume expansion. The classical projection adds the flagpole height to the breakout point. Failure to break in the expected direction invalidates the setup.",
+    "keywords": ["flag", "bull flag", "bear flag", "pennant", "chart pattern", "continuation", "flagpole", "consolidation", "breakout"],
+    "source": "seed"
+  },
+  {
+    "title": "Wedges (Rising and Falling)",
+    "category": "chart-patterns",
+    "content": "A rising wedge has both trendlines sloping up but converging, with the lower line steeper; despite higher prices, momentum fades and it often breaks down — bearish as a reversal at tops or continuation within a downtrend. A falling wedge converges downward and frequently breaks up — bullish. Volume typically contracts through the wedge and expands on resolution. Wedges are prone to false breaks, so traders often wait for a decisive close outside the pattern.",
+    "keywords": ["wedge", "rising wedge", "falling wedge", "chart pattern", "reversal", "continuation", "convergence", "bullish", "bearish"],
+    "source": "seed"
+  },
+  {
+    "title": "Cup and Handle / Rounded Bottom",
+    "category": "chart-patterns",
+    "content": "A cup and handle is a bullish continuation pattern: a rounded 'U' shaped recovery (the cup) followed by a small downward drift (the handle). It completes on a breakout above the handle's resistance, often targeting the cup's depth. A rounded bottom is similar without the handle, reflecting a slow shift from selling to buying. Both indicate gradual accumulation and are more meaningful on higher timeframes with volume dipping in the cup and expanding on the breakout.",
+    "keywords": ["cup and handle", "rounded bottom", "chart pattern", "continuation", "bullish", "accumulation", "breakout"],
+    "source": "seed"
+  },
+  {
+    "title": "Rectangle / Range-Bound Market",
+    "category": "chart-patterns",
+    "content": "A rectangle forms when price oscillates between parallel horizontal support and resistance. It represents balance between buyers and sellers. Rectangles can be continuation patterns (breaking in the direction of the prior trend) or reversal patterns. Range traders buy support and sell resistance inside the range, while breakout traders wait for a close outside the boundary with volume. False breakouts ('fakeouts') are common, so confirmation and retests of the broken level are widely used.",
+    "keywords": ["rectangle", "range", "sideways", "consolidation", "chart pattern", "support", "resistance", "breakout", "fakeout"],
+    "source": "seed"
+  },
+  {
+    "title": "Support and Resistance Basics",
+    "category": "support-resistance",
+    "content": "Support is a price level where buying interest has historically been strong enough to halt declines; resistance is where selling pressure has halted advances. Levels form at prior swing highs/lows, round numbers, areas of high volume, and places price has reacted multiple times. The more times a level is tested, the more significant it is — but each test also consumes orders, so heavily tested levels eventually break. Once broken, support tends to become resistance and vice versa (polarity flip). Levels are zones rather than exact lines.",
+    "keywords": ["support", "resistance", "level", "zone", "polarity", "swing high", "swing low", "round number", "breakout", "retest"],
+    "source": "seed"
+  },
+  {
+    "title": "Drawing Trendlines and Channels",
+    "category": "support-resistance",
+    "content": "An uptrend line connects successive higher lows (at least two, ideally three touches); a downtrend line connects lower highs. Trendlines act as dynamic support/resistance. A channel adds a parallel line on the opposite side. Breaks of trendlines can signal slowing momentum but are only meaningful on a closing basis with volume; shallow intraday breaks often reverse. The steeper the trendline, the less sustainable it usually is.",
+    "keywords": ["trendline", "trend line", "channel", "dynamic support", "higher lows", "lower highs", "slope", "break"],
+    "source": "seed"
+  },
+  {
+    "title": "Market Structure: HH, HL, LH, LL",
+    "category": "market-structure",
+    "content": "Market structure describes the sequence of swing points. An uptrend makes higher highs (HH) and higher lows (HL); a downtrend makes lower highs (LH) and lower lows (LL); a range shows no clear sequence. A break of structure (BOS) occurs when price exceeds the prior swing in the trend's direction, confirming continuation. A change of character (CHoCH) occurs when the trend's defining swing is broken (e.g. an uptrend's HL fails), warning of possible reversal. Structure analysis helps traders align with the dominant trend and define invalidation points.",
+    "keywords": ["market structure", "higher high", "higher low", "lower high", "lower low", "break of structure", "bos", "choch", "change of character", "swing", "trend"],
+    "source": "seed"
+  },
+  {
+    "title": "Break of Structure vs. Liquidity Sweep",
+    "category": "market-structure",
+    "content": "Not every break of a swing level is a true structural break. A liquidity sweep (stop hunt) pierces a prior high/low to trigger resting stop orders and then reverses back into the range, leaving a long wick. True breaks tend to close beyond the level and follow through. Recognizing the difference matters: a sweep of lows that reclaims the range can be bullish (failed breakdown), while a sweep of highs that falls back can be bearish (failed breakout / upthrust).",
+    "keywords": ["liquidity sweep", "stop hunt", "false breakout", "failed breakdown", "upthrust", "break of structure", "wick", "reclaim"],
+    "source": "seed"
+  },
+  {
+    "title": "Moving Averages (SMA, EMA, MA Crosses)",
+    "category": "indicators",
+    "content": "Moving averages smooth price to reveal trend direction. Simple moving averages (SMA) weight all candles equally; exponential moving averages (EMA) weight recent price more heavily and react faster. Common periods are 20, 50, 100 and 200. Price above a rising MA suggests an uptrend; below a falling MA suggests a downtrend. A golden cross (fast MA above slow MA, e.g. 50 over 200) is viewed as bullish; a death cross as bearish. MAs lag by design, so they whipsaw in ranges and are most useful as trend filters and dynamic support/resistance.",
+    "keywords": ["moving average", "sma", "ema", "golden cross", "death cross", "trend", "indicator", "lagging", "200 ma", "50 ma", "dynamic support"],
+    "source": "seed"
+  },
+  {
+    "title": "RSI (Relative Strength Index)",
+    "category": "indicators",
+    "content": "RSI measures the speed and magnitude of recent gains versus losses on a 0–100 scale, typically over 14 periods. Above 70 is traditionally 'overbought' and below 30 'oversold' — but in strong trends RSI can stay extreme for long periods, so extremes alone are not signals. More useful RSI concepts: divergence (price makes a new high/low while RSI does not, hinting at weakening momentum), the 40–60 midline acting as trend confirmation, and RSI crossing back out of extreme zones as a trigger. Divergence is a warning, not a prediction.",
+    "keywords": ["rsi", "relative strength index", "overbought", "oversold", "divergence", "momentum", "oscillator", "indicator"],
+    "source": "seed"
+  },
+  {
+    "title": "MACD (Moving Average Convergence Divergence)",
+    "category": "indicators",
+    "content": "MACD plots the difference between two EMAs (usually 12 and 26) against a signal line (9-period EMA of the MACD), plus a histogram of the gap between them. Crossovers of MACD and signal, zero-line crossings, and histogram contraction/expansion are read as momentum shifts. Divergence between price and MACD suggests momentum is fading relative to price. MACD is lagging; it works best in trending markets and produces false signals in chop.",
+    "keywords": ["macd", "signal line", "histogram", "momentum", "crossover", "divergence", "indicator", "trend"],
+    "source": "seed"
+  },
+  {
+    "title": "Bollinger Bands",
+    "category": "indicators",
+    "content": "Bollinger Bands consist of a middle SMA (usually 20) and upper/lower bands two standard deviations away. They expand with volatility and contract during quiet periods. A 'squeeze' (very narrow bands) often precedes a volatility expansion, but direction is not predetermined. Touching a band is not automatically overbought/oversold — in trends price 'walks the band'. Bands are best combined with other context like volume, structure, or RSI.",
+    "keywords": ["bollinger", "bollinger bands", "volatility", "squeeze", "standard deviation", "indicator", "bands"],
+    "source": "seed"
+  },
+  {
+    "title": "Volume and Volume Analysis",
+    "category": "indicators",
+    "content": "Volume measures participation and is used to confirm price moves: breakouts on high volume are considered more credible, while breakouts on low volume are suspect. Declining volume during a trend can warn of exhaustion; volume spikes at extremes can mark capitulation or climax. Volume profile (if visible) shows where most trading occurred — high-volume nodes act as magnets/support, low-volume zones tend to be crossed quickly. OBV (on-balance volume) accumulates volume in the direction of closes to gauge buying vs selling pressure over time.",
+    "keywords": ["volume", "obv", "on balance volume", "volume profile", "confirmation", "breakout", "capitulation", "climax", "indicator"],
+    "source": "seed"
+  },
+  {
+    "title": "Fibonacci Retracement and Extension",
+    "category": "indicators",
+    "content": "Fibonacci tools project potential reaction zones from a swing move. Retracements mark common pullback levels at 38.2%, 50% and 61.8% of the prior impulse; many traders also watch 23.6% and 78.6%. Extensions (127.2%, 161.8%) project targets beyond the swing. These levels are self-fulfilling only in the sense that many participants watch them; they work best as confluence with prior support/resistance, trendlines, or candlestick signals, and they should not be used in isolation.",
+    "keywords": ["fibonacci", "fib", "retracement", "extension", "golden ratio", "61.8", "pullback", "confluence", "indicator"],
+    "source": "seed"
+  },
+  {
+    "title": "Stochastic Oscillator",
+    "category": "indicators",
+    "content": "The stochastic oscillator compares the closing price to the high-low range over N periods (commonly 14) on a 0–100 scale, with %K and %D lines. Readings above 80 are 'overbought', below 20 'oversold'. Like RSI, extremes persist in strong trends, so stochastics are most useful in ranges — buying oversold crosses up near support and selling overbought crosses down near resistance. Divergences can hint at fading momentum.",
+    "keywords": ["stochastic", "oscillator", "overbought", "oversold", "k d cross", "range trading", "indicator", "divergence"],
+    "source": "seed"
+  },
+  {
+    "title": "Average True Range (ATR) and Volatility",
+    "category": "indicators",
+    "content": "ATR measures average price range over N periods (commonly 14), giving a volatility baseline. Traders use ATR to size stops (e.g. 1.5–2x ATR beyond a level) and position sizes so risk adapts to market conditions rather than fixed pips/points. Rising ATR means expanding volatility (common at breakouts and news); falling ATR means compression, which often precedes expansion. ATR says nothing about direction.",
+    "keywords": ["atr", "average true range", "volatility", "stop loss", "position sizing", "range", "indicator"],
+    "source": "seed"
+  },
+  {
+    "title": "Trend Identification and Trend Strength",
+    "category": "technical-analysis",
+    "content": "A trend is the dominant direction of price: up (higher highs and higher lows), down (lower highs and lower lows), or sideways (no consistent sequence). Trend strength is judged by the angle and consistency of moves, the depth of pullbacks, volume behavior, and momentum indicators. 'The trend is your friend' reflects the statistical tendency of trends to persist — but every trend eventually ends, usually with momentum divergence, a break of structure, or a failed push to new extremes. Counter-trend trades carry higher risk and need stronger confirmation.",
+    "keywords": ["trend", "uptrend", "downtrend", "sideways", "trend strength", "pullback", "impulse", "momentum", "technical analysis"],
+    "source": "seed"
+  },
+  {
+    "title": "Multi-Timeframe Analysis",
+    "category": "technical-analysis",
+    "content": "Multi-timeframe analysis means examining the higher timeframe for context (dominant trend, major levels) and the lower timeframe for entry timing. A pattern on a 15-minute chart inside a higher-timeframe resistance zone carries different meaning than the same pattern in open space. Alignment across timeframes increases the quality of a setup; conflict between timeframes (e.g. bullish 15m inside bearish daily) means higher uncertainty and often smaller position sizing or standing aside.",
+    "keywords": ["multi timeframe", "higher timeframe", "context", "top down", "timeframe", "alignment", "technical analysis"],
+    "source": "seed"
+  },
+  {
+    "title": "Confluence in Trading Setups",
+    "category": "technical-analysis",
+    "content": "Confluence means multiple independent signals pointing the same way at the same level — for example a support level + hammer candle + RSI divergence + trendline touch. No single signal is reliable on its own; confluence improves the odds that a level will react. Traders rank setups by how many confluences align. Importantly, confluence increases the quality of the analysis, never guarantees the outcome.",
+    "keywords": ["confluence", "setup", "signal quality", "combination", "confirmation", "technical analysis"],
+    "source": "seed"
+  },
+  {
+    "title": "Breakouts, Retests and False Breakouts",
+    "category": "technical-analysis",
+    "content": "A breakout is a move beyond a defined level (range boundary, trendline, pattern edge). High-quality breakouts close decisively beyond the level on expanding volume and often retest the broken level from the other side before continuing. False breakouts (fakeouts) pierce a level and reverse back through it, frequently trapping breakout traders; they are common at obvious levels where liquidity clusters. Waiting for a close and/or retest reduces fakeout risk at the cost of a worse entry.",
+    "keywords": ["breakout", "retest", "false breakout", "fakeout", "close confirmation", "volume expansion", "trapped traders"],
+    "source": "seed"
+  },
+  {
+    "title": "Risk Management and Position Sizing",
+    "category": "trading-concepts",
+    "content": "Risk management determines how much capital is exposed per trade — commonly 0.5–2% of account equity — with a stop-loss defining the invalidation point and position size derived from the stop distance. Risk-to-reward (R:R) compares potential loss to potential gain; even a modest win rate is profitable with favorable R:R. Key ideas: never widen stops to avoid losses, respect invalidation levels, reduce size when signals conflict, and treat a string of losses as information about market conditions, not just bad luck.",
+    "keywords": ["risk management", "position sizing", "stop loss", "risk reward", "r multiples", "invalidation", "capital preservation"],
+    "source": "seed"
+  },
+  {
+    "title": "Trading Psychology and Bias",
+    "category": "trading-concepts",
+    "content": "Analysis is undermined by psychological biases: confirmation bias (seeing only evidence that supports a position), recency bias (overweighting the last trade), FOMO (chasing extended moves), and revenge trading (oversizing after a loss). Countermeasures include writing the analysis before entering, defining invalidation in advance, journaling outcomes, and accepting uncertainty as inherent — no chart reading knows what the next candle will do. Probabilistic thinking replaces 'being right' with 'positive expectancy over many trades'.",
+    "keywords": ["psychology", "bias", "confirmation bias", "fomo", "revenge trading", "journal", "discipline", "probabilistic thinking"],
+    "source": "seed"
+  },
+  {
+    "title": "Order Flow Basics: Buyers vs Sellers",
+    "category": "trading-concepts",
+    "content": "Every trade has a buyer and a seller; price moves when one side consumes the other's resting orders aggressively. Long lower wicks show buyers absorbing selling; long upper wicks show sellers absorbing buying. Understanding absorption, aggression, and how price reacts at levels of resting orders (prior highs/lows, round numbers) explains why patterns 'work': they are footprints of supply and demand imbalance. Candlestick patterns are visual summaries of this interaction.",
+    "keywords": ["order flow", "supply", "demand", "absorption", "wicks", "buyers", "sellers", "imbalance", "price action"],
+    "source": "seed"
+  },
+  {
+    "title": "Supply and Demand Zones",
+    "category": "trading-concepts",
+    "content": "Supply zones are areas where aggressive selling previously originated (rally-base-drop or down moves from a base); demand zones are where aggressive buying originated. Unlike single support/resistance lines, zones acknowledge that big orders fill over a range of prices. Fresh, untested zones with strong departures are considered higher quality. Price returning to a zone may react again — until the zone is consumed (broken), after which polarity can flip.",
+    "keywords": ["supply zone", "demand zone", "order block", "zone", "fresh zone", "polarity", "price action"],
+    "source": "seed"
+  },
+  {
+    "title": "Chart Timeframes and Their Meaning",
+    "category": "trading-concepts",
+    "content": "Each candle represents a fixed period (1m, 5m, 15m, 1h, 4h, daily, weekly). Lower timeframes show more detail but more noise; higher timeframes show dominant trends and stronger levels. Patterns and signals on higher timeframes are generally considered more significant. When analyzing a screenshot without axis labels, the timeframe is unknown — the same structure can mean different things intraday versus weekly, which is a key source of uncertainty in chart reading.",
+    "keywords": ["timeframe", "candle period", "intraday", "daily", "weekly", "noise", "significance"],
+    "source": "seed"
+  },
+  {
+    "title": "Divergence: Regular and Hidden",
+    "category": "technical-analysis",
+    "content": "Regular bullish divergence: price makes a lower low while the oscillator (RSI/MACD) makes a higher low — momentum against the decline is fading, often preceding reversals. Regular bearish divergence: price makes a higher high while the oscillator makes a lower high. Hidden divergence occurs within trends (higher low in price, lower low in oscillator) and is read as continuation. Divergences are warnings of weakening momentum, not timing signals — price can diverge for a long time before turning.",
+    "keywords": ["divergence", "regular divergence", "hidden divergence", "rsi", "macd", "momentum", "reversal warning"],
+    "source": "seed"
+  },
+  {
+    "title": "Candlestick Anatomy: Body, Wick, Close",
+    "category": "candlestick-patterns",
+    "content": "A candlestick shows open, high, low and close for a period. The body spans open-to-close: green/white when close is above open (bullish candle), red/black when below (bearish candle). Wicks (shadows) show rejected extremes. Body size reflects conviction; wick size reflects rejection. The close is considered the most important price of the candle — closes beyond levels matter more than intrabar wicks. Reading bodies and wicks together tells the story of who won the period: buyers, sellers, or neither.",
+    "keywords": ["candlestick", "candle anatomy", "body", "wick", "shadow", "open high low close", "ohlc", "conviction", "rejection"],
+    "source": "seed"
+  }
+]

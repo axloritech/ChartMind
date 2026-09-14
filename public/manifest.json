@@ -1,0 +1,47 @@
+{
+  "name": "ChartMind — AI Trading Chart Analysis",
+  "short_name": "ChartMind",
+  "description": "Upload a trading chart screenshot and get structured, knowledge-grounded educational analysis powered by Gemini Vision.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#060913",
+  "theme_color": "#060913",
+  "categories": ["finance", "education", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Analyze Chart",
+      "short_name": "Analyze",
+      "url": "/analyze",
+      "description": "Upload a chart screenshot for AI analysis"
+    },
+    {
+      "name": "Knowledge Base",
+      "short_name": "Knowledge",
+      "url": "/knowledge",
+      "description": "Search trading concepts and patterns"
+    }
+  ]
+}
