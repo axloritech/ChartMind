@@ -8,19 +8,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: {
-          950: "#060913",
-          900: "#0a0f1e",
-          800: "#101728",
-          700: "#1a2338",
-          600: "#263149",
-        },
+        // brand: mostly white surfaces, red used sparingly as the accent
         accent: {
-          DEFAULT: "#22d3ee",
-          dim: "#0e7490",
+          DEFAULT: "#dc2626", // red-600
+          dim: "#991b1b",
         },
-        bull: "#34d399",
-        bear: "#f87171",
+        bull: "#059669", // emerald-600
+        bear: "#dc2626", // red-600
       },
       fontFamily: {
         sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
@@ -32,8 +26,8 @@ const config: Config = {
       },
       keyframes: {
         scan: {
-          "0%, 100%": { transform: "translateY(-30%)", opacity: "0.2" },
-          "50%": { transform: "translateY(30%)", opacity: "0.9" },
+          "0%, 100%": { transform: "translateY(-30%)", opacity: "0.15" },
+          "50%": { transform: "translateY(30%)", opacity: "0.7" },
         },
       },
     },

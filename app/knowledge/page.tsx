@@ -16,13 +16,14 @@ export default function KnowledgePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Trading <span className="text-accent">Knowledge Base</span>
+        <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          Trading <span className="text-red-600">Knowledge Base</span>
         </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600">
           {entries.length} entries across {categories.length} categories. This is the same local
           knowledge ChartMind searches when explaining your charts — seeded concepts plus chunks
-          ingested from PDFs in <code className="rounded bg-ink-800 px-1.5 py-0.5 font-mono text-xs text-accent">/knowledge/pdfs</code>.
+          ingested from PDFs in{" "}
+          <code className="rounded bg-slate-100 px-1.5 py-0.5 font-mono text-xs text-red-600">/knowledge/pdfs</code>.
         </p>
       </div>
 

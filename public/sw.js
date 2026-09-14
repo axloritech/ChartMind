@@ -7,7 +7,7 @@
  *  - /api/analyze is NEVER cached (it hits the AI).
  */
 
-const CACHE = "chartmind-v1";
+const CACHE = "chartmind-v2";
 const SHELL = [
   "/",
   "/analyze",

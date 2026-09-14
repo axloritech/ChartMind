@@ -133,10 +133,10 @@ export default function AnalyzePage() {
   return (
     <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6">
       <div className="mb-8 text-center">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl">
-          Analyze a <span className="text-accent">Trading Chart</span>
+        <h1 className="text-3xl font-extrabold tracking-tight text-slate-900 sm:text-4xl">
+          Analyze a <span className="text-red-600">Trading Chart</span>
         </h1>
-        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-400">
+        <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600">
           Upload a screenshot (JPG, JPEG, PNG or WEBP, max 8 MB). ChartMind will detect patterns and
           levels with Gemini Vision, ground the explanation in the local trading knowledge base, and
           show both bullish and bearish scenarios — educational analysis, never a prediction.
@@ -161,19 +161,19 @@ export default function AnalyzePage() {
               onDrop={onDrop}
               className={`flex cursor-pointer flex-col items-center justify-center gap-4 rounded-2xl border-2 border-dashed px-6 py-14 text-center transition ${
                 dragActive
-                  ? "border-accent bg-accent/5"
-                  : "border-white/10 bg-ink-800/40 hover:border-accent/40 hover:bg-ink-800/70"
+                  ? "border-red-400 bg-red-50"
+                  : "border-slate-300 bg-slate-50 hover:border-red-300 hover:bg-red-50/40"
               }`}
             >
-              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent/10 text-3xl" aria-hidden="true">
+              <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-3xl" aria-hidden="true">
                 📸
               </div>
               <div>
-                <p className="text-base font-semibold text-white">
+                <p className="text-base font-semibold text-slate-900">
                   Drop your chart screenshot here
                 </p>
                 <p className="mt-1 text-sm text-slate-500">
-                  or <span className="text-accent underline underline-offset-2">browse files</span> —
+                  or <span className="text-red-600 underline underline-offset-2">browse files</span> —
                   JPG, JPEG, PNG, WEBP · max 8 MB
                 </p>
               </div>
@@ -187,7 +187,7 @@ export default function AnalyzePage() {
             </div>
           ) : (
             <div className="space-y-4">
-              <div className="relative overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <div className="relative overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={previewUrl}
@@ -196,7 +196,7 @@ export default function AnalyzePage() {
                 />
                 {phase === "loading" && (
                   <div className="pointer-events-none absolute inset-0">
-                    <div className="h-16 w-full animate-scan bg-gradient-to-b from-transparent via-accent/20 to-transparent" />
+                    <div className="h-16 w-full animate-scan bg-gradient-to-b from-transparent via-red-500/20 to-transparent" />
                   </div>
                 )}
               </div>
@@ -221,7 +221,7 @@ export default function AnalyzePage() {
                   >
                     {phase === "loading" ? (
                       <>
-                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-ink-950/40 border-t-ink-950" aria-hidden="true" />
+                        <span className="h-4 w-4 animate-spin rounded-full border-2 border-white/40 border-t-white" aria-hidden="true" />
                         Analyzing…
                       </>
                     ) : (
@@ -239,12 +239,12 @@ export default function AnalyzePage() {
       {error && phase !== "loading" && (
         <div
           role="alert"
-          className="mt-5 flex items-start gap-3 rounded-2xl border border-bear/30 bg-bear/10 p-4 text-sm text-red-200"
+          className="mt-5 flex items-start gap-3 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700"
         >
           <span aria-hidden="true">⚠️</span>
           <div className="flex-1">
-            <p className="font-semibold">Analysis failed</p>
-            <p className="mt-1 leading-relaxed text-red-200/80">{error}</p>
+            <p className="font-semibold text-red-800">Analysis failed</p>
+            <p className="mt-1 leading-relaxed text-red-700/90">{error}</p>
           </div>
           {phase === "error" && previewUrl && (
             <button type="button" className="btn-secondary !px-3 !py-1.5 text-xs" onClick={analyze}>
@@ -265,7 +265,7 @@ export default function AnalyzePage() {
       {phase === "done" && result?.analysis && (
         <div ref={resultRef} className="space-y-5">
           <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="text-xl font-bold text-white">Analysis Result</h2>
+            <h2 className="text-xl font-bold text-slate-900">Analysis Result</h2>
             <button type="button" className="btn-secondary !py-2 text-xs" onClick={reset}>
               ↺ Analyze another chart
             </button>
@@ -273,10 +273,10 @@ export default function AnalyzePage() {
 
           {previewUrl && file && (
             <details className="card p-4">
-              <summary className="cursor-pointer text-xs font-semibold text-slate-400">
+              <summary className="cursor-pointer text-xs font-semibold text-slate-500">
                 📷 View uploaded screenshot ({file.name})
               </summary>
-              <div className="mt-3 overflow-hidden rounded-xl border border-white/10 bg-black/40">
+              <div className="mt-3 overflow-hidden rounded-xl border border-slate-200 bg-slate-100">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={previewUrl} alt="Analyzed chart" className="max-h-[400px] w-full object-contain" />
               </div>

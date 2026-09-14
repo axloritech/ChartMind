@@ -70,7 +70,7 @@ export default function KnowledgeBrowser({
     <div className="space-y-6">
       {/* Search */}
       <div className="relative">
-        <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" aria-hidden="true">
+        <span className="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" aria-hidden="true">
           🔍
         </span>
         <input
@@ -88,7 +88,7 @@ export default function KnowledgeBrowser({
         <button
           type="button"
           onClick={() => setActiveCategory(null)}
-          className={`chip transition ${!activeCategory ? "!border-accent/50 !text-accent" : "hover:!text-white"}`}
+          className={`chip transition ${!activeCategory ? "!border-red-300 !bg-red-50 !text-red-600" : "hover:!text-slate-900"}`}
         >
           All ({entries.length})
         </button>
@@ -98,7 +98,7 @@ export default function KnowledgeBrowser({
             type="button"
             onClick={() => setActiveCategory(activeCategory === category ? null : category)}
             className={`chip transition ${
-              activeCategory === category ? "!border-accent/50 !text-accent" : "hover:!text-white"
+              activeCategory === category ? "!border-red-300 !bg-red-50 !text-red-600" : "hover:!text-slate-900"
             }`}
           >
             {categoryLabel(category)} ({count})
@@ -115,7 +115,7 @@ export default function KnowledgeBrowser({
       {filtered.length === 0 ? (
         <div className="card p-10 text-center">
           <p className="text-3xl" aria-hidden="true">🤷</p>
-          <p className="mt-3 text-sm font-semibold text-white">No matching entries</p>
+          <p className="mt-3 text-sm font-semibold text-slate-900">No matching entries</p>
           <p className="mt-1 text-xs text-slate-500">
             Try different keywords, or add PDFs to /knowledge/pdfs and run <code className="font-mono">npm run ingest</code>.
           </p>
@@ -123,14 +123,14 @@ export default function KnowledgeBrowser({
       ) : (
         <div className="grid gap-4 md:grid-cols-2">
           {filtered.map((entry, i) => (
-            <article key={`${entry.title}-${i}`} className="card flex flex-col p-5 transition hover:border-accent/25">
+            <article key={`${entry.title}-${i}`} className="card flex flex-col p-5 transition hover:border-red-200">
               <div className="mb-2 flex items-start justify-between gap-2">
-                <h2 className="text-sm font-bold text-white">{entry.title}</h2>
-                <span className="shrink-0 rounded-full bg-white/5 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-slate-500">
+                <h2 className="text-sm font-bold text-slate-900">{entry.title}</h2>
+                <span className="shrink-0 rounded-full bg-slate-100 px-2 py-0.5 text-[10px] font-medium uppercase tracking-wide text-slate-500">
                   {categoryLabel(entry.category ?? "general")}
                 </span>
               </div>
-              <p className="flex-1 text-xs leading-relaxed text-slate-400">{entry.content}</p>
+              <p className="flex-1 text-xs leading-relaxed text-slate-600">{entry.content}</p>
               {entry.keywords?.length > 0 && (
                 <div className="mt-3 flex flex-wrap gap-1.5">
                   {entry.keywords.slice(0, 8).map((kw) => (
@@ -138,7 +138,7 @@ export default function KnowledgeBrowser({
                       key={kw}
                       type="button"
                       onClick={() => setQuery(kw)}
-                      className="rounded-md bg-white/5 px-2 py-0.5 text-[10px] text-slate-500 transition hover:bg-accent/10 hover:text-accent"
+                      className="rounded-md bg-slate-100 px-2 py-0.5 text-[10px] text-slate-500 transition hover:bg-red-50 hover:text-red-600"
                       title={`Search for "${kw}"`}
                     >
                       {kw}
@@ -147,7 +147,7 @@ export default function KnowledgeBrowser({
                 </div>
               )}
               {entry.source && String(entry.source).startsWith("pdf:") && (
-                <p className="mt-3 truncate text-[10px] text-slate-600">Source: {entry.source}</p>
+                <p className="mt-3 truncate text-[10px] text-slate-400">Source: {entry.source}</p>
               )}
             </article>
           ))}

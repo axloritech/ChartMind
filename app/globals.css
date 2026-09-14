@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html {
@@ -11,28 +11,30 @@ html {
 }
 
 body {
-  @apply bg-ink-950 text-slate-200 antialiased;
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(34, 211, 238, 0.12), transparent),
-    radial-gradient(ellipse 60% 40% at 90% 110%, rgba(52, 211, 153, 0.06), transparent);
+  @apply bg-white text-slate-700 antialiased;
+  background-image: radial-gradient(
+    ellipse 80% 50% at 50% -20%,
+    rgba(220, 38, 38, 0.05),
+    transparent
+  );
   background-attachment: fixed;
 }
 
 ::selection {
-  @apply bg-accent/30 text-white;
+  @apply bg-red-100 text-red-900;
 }
 
-/* thin dark scrollbars */
+/* thin light scrollbars */
 * {
   scrollbar-width: thin;
-  scrollbar-color: theme("colors.ink.600") transparent;
+  scrollbar-color: theme("colors.slate.300") transparent;
 }
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 *::-webkit-scrollbar-thumb {
-  @apply bg-ink-600 rounded-full;
+  @apply bg-slate-300 rounded-full;
 }
 *::-webkit-scrollbar-track {
   background: transparent;
@@ -40,18 +42,18 @@ body {
 
 @layer components {
   .card {
-    @apply rounded-2xl border border-white/5 bg-ink-900/80 backdrop-blur-sm shadow-lg shadow-black/20;
+    @apply rounded-2xl border border-slate-200 bg-white shadow-sm;
   }
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3 text-sm font-semibold text-ink-950 transition hover:bg-cyan-300 active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-red-700 active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
   }
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-white/10 bg-ink-800 px-5 py-3 text-sm font-semibold text-slate-200 transition hover:border-accent/40 hover:text-white active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-sm font-semibold text-slate-700 transition hover:border-red-300 hover:text-red-700 active:scale-[0.98] disabled:opacity-40 disabled:pointer-events-none;
   }
   .chip {
-    @apply inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-ink-800 px-3 py-1 text-xs font-medium text-slate-300;
+    @apply inline-flex items-center gap-1.5 rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-600;
   }
   .input {
-    @apply w-full rounded-xl border border-white/10 bg-ink-800 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 outline-none transition focus:border-accent/60 focus:ring-2 focus:ring-accent/20;
+    @apply w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 outline-none transition focus:border-red-400 focus:ring-2 focus:ring-red-100;
   }
 }

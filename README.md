@@ -82,7 +82,7 @@ chartmind/
 
    ```env
    GEMINI_API_KEY=your_api_key_here
-   GEMINI_MODEL=gemini-2.0-flash
+   GEMINI_MODEL=gemini-3.5-flash
    ```
 
    Get a key at <https://aistudio.google.com/apikey>.
@@ -179,7 +179,7 @@ bullish scenario · bearish scenario · key levels · confidence · disclaimer
    | Name             | Value                     | Environment              |
    | ---------------- | ------------------------- | ------------------------ |
    | `GEMINI_API_KEY` | your key                  | Production, Preview, Dev |
-   | `GEMINI_MODEL`   | e.g. `gemini-2.0-flash`   | Production, Preview, Dev |
+   | `GEMINI_MODEL`   | e.g. `gemini-3.5-flash`   | Production, Preview, Dev |
 
 4. **Deploy.**
 
@@ -189,7 +189,11 @@ Deployment notes:
 - If you add PDFs later: run `npm run ingest` **locally**, commit the updated
   `knowledge/trading-knowledge.json`, and push — Vercel redeploys automatically.
 - The `/api/analyze` route sets `maxDuration = 60`. On Vercel Hobby the effective limit may be
-  lower; if analyses time out on large models, use a fast model (e.g. `gemini-2.0-flash`) or upgrade.
+  lower; if analyses time out on large models, use a fast model (e.g. `gemini-3.5-flash`) or upgrade.
+- **Model resilience:** Google retires Gemini model IDs regularly (`gemini-2.0-flash` was shut down
+  June 1, 2026). If your `GEMINI_MODEL` returns 404, ChartMind automatically retries with known-good
+  fallbacks (`gemini-3.5-flash` → `gemini-3.8-flash` → `gemini-2.5-flash` → `gemini-3.1-flash-lite`),
+  so a stale env value will not break analysis.
 
 ## 🔐 Security
 
