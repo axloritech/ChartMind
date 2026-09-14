@@ -1,6 +1,78 @@
 "use client";
 
-import type { ChartAnalysis, KnowledgeEntry } from "@/lib/types";
+import type { ChartAnalysis, DirectionalBias, KnowledgeEntry } from "@/lib/types";
+
+const STRENGTH_WIDTH: Record<DirectionalBias["strength"], string> = {
+  weak: "34%",
+  moderate: "67%",
+  strong: "100%",
+};
+
+/** Prominent educational "which side has more evidence" panel. */
+function BiasCard({ bias }: { bias: DirectionalBias }) {
+  const cfg =
+    bias.lean === "bullish"
+      ? {
+          icon: "▲",
+          title: "Buy-side lean",
+          subtitle: "Buy-side setups currently have more supporting evidence",
+          bar: "bg-emerald-500",
+          text: "text-emerald-700",
+          border: "border-emerald-300",
+          bg: "bg-emerald-50/60",
+        }
+      : bias.lean === "bearish"
+      ? {
+          icon: "▼",
+          title: "Sell-side lean",
+          subtitle: "Sell-side setups currently have more supporting evidence",
+          bar: "bg-red-500",
+          text: "text-red-600",
+          border: "border-red-300",
+          bg: "bg-red-50/50",
+        }
+      : {
+          icon: "◆",
+          title: "Balanced / no clear edge",
+          subtitle: "Evidence is conflicting or thin — neither side is clearly advisable",
+          bar: "bg-slate-400",
+          text: "text-slate-600",
+          border: "border-slate-300",
+          bg: "bg-slate-50",
+        };
+
+  return (
+    <section className={`card ${cfg.border} ${cfg.bg} p-5`}>
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h3 className={`flex items-center gap-2 text-base font-bold ${cfg.text}`}>
+          <span aria-hidden="true">{cfg.icon}</span> {cfg.title}
+          <span className="rounded-full bg-white px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-slate-600 ring-1 ring-slate-200">
+            {bias.strength} confluence
+          </span>
+        </h3>
+        <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">
+          Educational lean · not a signal
+        </p>
+      </div>
+      <p className="mt-1 text-sm font-medium text-slate-700">{cfg.subtitle}</p>
+
+      {/* strength meter */}
+      <div className="mt-3 h-2 w-full overflow-hidden rounded-full bg-white ring-1 ring-slate-200" aria-hidden="true">
+        <div className={`h-full rounded-full ${cfg.bar}`} style={{ width: STRENGTH_WIDTH[bias.strength] }} />
+      </div>
+
+      <p className="mt-3 text-sm leading-relaxed text-slate-600">{bias.reasoning}</p>
+      <p className="mt-2 text-xs leading-relaxed text-slate-500">
+        <span className="font-semibold text-slate-600">🔄 What would flip this lean:</span>{" "}
+        {bias.invalidation}
+      </p>
+      <p className="mt-2 text-[11px] text-slate-400">
+        This is a summary of which scenario the visible evidence currently supports — not financial
+        advice and not a prediction of the next candle.
+      </p>
+    </section>
+  );
+}
 
 function SectionCard({
   icon,
@@ -85,6 +157,9 @@ export default function AnalysisResult({
 
   return (
     <div className="space-y-5">
+      {/* Directional bias — which side has more evidence right now */}
+      {analysis.directionalBias && <BiasCard bias={analysis.directionalBias} />}
+
       {/* Confidence banner */}
       <div className="flex flex-wrap items-center gap-3">
         <span className={`chip border ${confidenceTone}`}>

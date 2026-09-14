@@ -26,6 +26,36 @@ function coerceString(value: unknown): string {
   return typeof value === "string" ? value : "";
 }
 
+function coerceBias(raw: unknown): ChartAnalysis["directionalBias"] {
+  const o = (raw ?? {}) as Record<string, unknown>;
+  const leanRaw = coerceString(o.lean).toLowerCase();
+  const lean: "bullish" | "bearish" | "neutral" = leanRaw.includes("bull")
+    ? "bullish"
+    : leanRaw.includes("bear")
+    ? "bearish"
+    : "neutral";
+  const strengthRaw = coerceString(o.strength).toLowerCase();
+  const strength: "weak" | "moderate" | "strong" = strengthRaw.includes("strong")
+    ? "strong"
+    : strengthRaw.includes("weak")
+    ? "weak"
+    : strengthRaw.includes("moderate")
+    ? "moderate"
+    : lean === "neutral"
+    ? "weak"
+    : "moderate";
+  return {
+    lean,
+    strength,
+    reasoning:
+      coerceString(o.reasoning) ||
+      "The model did not provide a bias summary — rely on the two scenarios below.",
+    invalidation:
+      coerceString(o.invalidation) ||
+      "Not specified — watch the key levels above for a change of character.",
+  };
+}
+
 function normalizeAnalysis(raw: Record<string, unknown>, obs: ChartObservations): ChartAnalysis {
   return {
     trend: coerceString(raw.trend) || obs.trend,
@@ -52,6 +82,7 @@ function normalizeAnalysis(raw: Record<string, unknown>, obs: ChartObservations)
     possibleBearishScenario: coerceString(raw.possibleBearishScenario),
     keyLevelsToWatch: coerceStringArray(raw.keyLevelsToWatch),
     confidence: coerceString(raw.confidence),
+    directionalBias: coerceBias(raw.directionalBias),
     educationalDisclaimer: coerceString(raw.educationalDisclaimer) || FALLBACK_DISCLAIMER,
   };
 }

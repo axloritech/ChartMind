@@ -146,7 +146,7 @@ POST /api/analyze
         │      → final ChartAnalysis JSON
         ▼
 Dashboard cards: trend · patterns · levels · structure · indicators ·
-bullish scenario · bearish scenario · key levels · confidence · disclaimer
+bullish scenario · bearish scenario · key levels · confidence · **buy/sell-side educational lean** · disclaimer
 ```
 
 ### Structured response shape
@@ -165,6 +165,12 @@ bullish scenario · bearish scenario · key levels · confidence · disclaimer
   "possibleBearishScenario": "",
   "keyLevelsToWatch": [],
   "confidence": "",
+  "directionalBias": {
+    "lean": "bullish | bearish | neutral",
+    "strength": "weak | moderate | strong",
+    "reasoning": "visible evidence behind the lean",
+    "invalidation": "what would flip the lean"
+  },
   "educationalDisclaimer": ""
 }
 ```

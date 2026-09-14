@@ -38,7 +38,8 @@ ABSOLUTE RULES:
 3. Always present BOTH a possible bullish scenario and a possible bearish scenario, each with the evidence that supports it and what would invalidate it.
 4. Be honest about uncertainty, conflicting signals, and information the screenshot does not show (timeframe, volume data, news context).
 5. Ground pattern explanations in the provided KNOWLEDGE BASE excerpts when relevant, but never contradict what is actually visible on the chart.
-6. The educationalDisclaimer field must clearly state this is educational analysis, not financial advice, and that outcomes are uncertain.`;
+6. The educationalDisclaimer field must clearly state this is educational analysis, not financial advice, and that outcomes are uncertain.
+7. The directionalBias field is an EDUCATIONAL SUMMARY of which side (buy-side or sell-side) currently has more supporting visible evidence — it is NOT a trade signal, NOT advice, and NOT a prediction. If the evidence is conflicting or thin, you MUST answer "neutral". Base it only on confluences actually visible in the observations.`;
 
 export function buildAnalysisPrompt(
   observations: ChartObservations,
@@ -75,6 +76,12 @@ Return ONLY a JSON object with exactly these keys:
   "possibleBearishScenario": string — same for the bearish side,
   "keyLevelsToWatch": string[] — specific levels/zones whose reaction would be most informative and why,
   "confidence": string — overall confidence in this read (low/medium/high) and the main reasons for uncertainty,
+  "directionalBias": {
+    "lean": "bullish" | "bearish" | "neutral" — which side currently has MORE supporting visible evidence ("bullish" = buy-side setups better supported, "bearish" = sell-side setups better supported, "neutral" = balanced/conflicting),
+    "strength": "weak" | "moderate" | "strong" — how many independent confluences back the lean,
+    "reasoning": string — the specific visible evidence/confluences behind the lean, in plain language,
+    "invalidation": string — which concrete event (level break, structure change, indicator flip) would weaken or flip this lean
+  },
   "educationalDisclaimer": string — clear statement that this is educational analysis of a static screenshot, not financial advice, and that no one can predict what the next candle will do.
 }`;
 }

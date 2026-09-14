@@ -42,6 +42,12 @@ const ANALYSIS_JSON = JSON.stringify({
   possibleBearishScenario: "bear case",
   keyLevelsToWatch: ["7754", "8119"],
   confidence: "medium",
+  directionalBias: {
+    lean: "bullish",
+    strength: "moderate",
+    reasoning: "Double bottom + hammer at demand with restored HH/HL structure.",
+    invalidation: "A decisive close back below the 7754 demand zone.",
+  },
   educationalDisclaimer: "mock disclaimer",
 });
 

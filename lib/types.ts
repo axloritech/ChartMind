@@ -26,6 +26,14 @@ export interface ChartObservations {
   instrumentGuess?: string;
 }
 
+/** Educational directional lean derived from the visible evidence. */
+export interface DirectionalBias {
+  lean: "bullish" | "bearish" | "neutral";
+  strength: "weak" | "moderate" | "strong";
+  reasoning: string;
+  invalidation: string;
+}
+
 /** Final structured analysis returned to the client. */
 export interface ChartAnalysis {
   trend: string;
@@ -40,6 +48,7 @@ export interface ChartAnalysis {
   possibleBearishScenario: string;
   keyLevelsToWatch: string[];
   confidence: string;
+  directionalBias: DirectionalBias;
   educationalDisclaimer: string;
 }
 
